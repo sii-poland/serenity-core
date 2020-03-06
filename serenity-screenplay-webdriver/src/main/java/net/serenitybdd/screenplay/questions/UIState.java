@@ -79,7 +79,7 @@ public abstract class UIState<T> {
     }
 
     public LocalDate asLocalDate(String format) {
-        return LocalDate.parse(format, DateTimeFormatter.ofPattern(format));
+        return LocalDate.parse(resolve().toString(), DateTimeFormatter.ofPattern(format));
     }
 
     public DateTime asDate(String format) {
